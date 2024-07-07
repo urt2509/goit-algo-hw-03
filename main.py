@@ -13,7 +13,7 @@ def get_days_from_today(date):
             current_date = datetime.today().date()
             
             days_from_today = (current_date - inputed_date).days
-            print(f"The number od days from today is: {days_from_today}")
+            print(f"The number of days from today: {days_from_today}")
 
             return days_from_today
         
