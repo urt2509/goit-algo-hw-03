@@ -1,16 +1,23 @@
-import datetime
+from datetime import datetime, date
+date = None
 
 def get_days_from_today(date):
-    try:
-       
-        inputed_date = datetime.datetime.strptime(date, "%Y-%m-%d").date()
-        # print(inputed_date, type(inputed_date))
-        today = datetime.today()
-        print(today)
 
+   while True:
+        
+        date = input('Enter your date in format "Year-month-day": ')
+        
+        try:
+            inputed_date = datetime.strptime(date, "%Y-%m-%d").date()
+                    
+            current_date = datetime.today().date()
+            
+            days_from_today = (current_date - inputed_date).days
+            print(f"The number od days from today is: {days_from_today}")
 
-    except NameError:
-        print(f'{date} is not in a particular format')
-
-date = "5"
-# get_days_from_today(date)
+            return days_from_today
+        
+        except ValueError:
+            print(f'Your date {date} is in a wrong format. Please, enter a valid date in format "Year-month-day"')
+            
+get_days_from_today(date)
