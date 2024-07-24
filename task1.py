@@ -3,10 +3,6 @@ from datetime import datetime, date
 
 def get_days_from_today(date):
 
-   while True:
-        
-        date = input('Enter your date in format "Year-month-day": ')
-        
         try:
             inputed_date = datetime.strptime(date, "%Y-%m-%d").date()
                     
@@ -21,3 +17,4 @@ def get_days_from_today(date):
             print(f'Your date {date} is in a wrong format. Please, enter a valid date in format "Year-month-day"')
             
 get_days_from_today(date)
+
