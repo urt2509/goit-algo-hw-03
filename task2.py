@@ -17,10 +17,3 @@ def get_numbers_ticket(min, max, quantity):
         except ValueError: 
             return []
 
-
-lottery_numbers = get_numbers_ticket(10, 4, 6)
-# lottery_numbers = get_numbers_ticket(995, 1000, 6)
-if not lottery_numbers:
-    print("Your lottery numbers: ") 
-else: 
-    print(f"Your lottery numbers: {lottery_numbers}")

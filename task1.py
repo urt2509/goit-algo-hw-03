@@ -1,5 +1,4 @@
 from datetime import datetime, date
-# date = None
 
 def get_days_from_today(date):
 
@@ -9,12 +8,10 @@ def get_days_from_today(date):
             current_date = datetime.today().date()
             
             days_from_today = (current_date - inputed_date).days
-            print(f"The number of days from today: {days_from_today}")
-
+                       
             return days_from_today
         
-        except ValueError:
-            print(f'Your date {date} is in a wrong format. Please, enter a valid date in format "Year-month-day"')
-            
-get_days_from_today(date)
+        except ValueError as e:
+             print(e)
 
+            
